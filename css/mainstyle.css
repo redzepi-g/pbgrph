@@ -1,0 +1,85 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+#landing{
+    background: url('../img/landing_bkg.jpg') center no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+    height: 400px;
+}
+
+.active{
+    border-bottom: 2px solid black;
+}
+
+#screenprinting{
+    background: url('../img/print_bkg.jpg') center no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+    height: 300px;
+    color:white;
+    text-shadow: 2px 2px 4px black;
+}
+
+#design{
+    background: url('../img/design_bkg.jpg') center no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+    height: 300px;
+    color:white;
+    text-shadow: 2px 2px 4px black;
+}
+
+#impression{
+    background: url('../img/impression_bkg.jpg') center no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+    height: 300px;
+    color:white;
+    text-shadow: 2px 2px 4px black;
+}
+
+#packaging{
+    background: url('../img/package_bkg.jpg') center no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+    height: 300px;
+    color:white;
+    text-shadow: 2px 2px 4px black;
+}
+
+#counseling{
+    background: url('../img/meeting_bkg.jpg') center no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+    height: 300px;
+    color:white;
+    text-shadow: 2px 2px 4px black;
+}
+
+#signs{
+    background: url('../img/signs_bkg.jpg') center no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+    height: 300px;
+    color:white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.serviceinfo{
+    text-shadow: 2px 2px 4px black;
+}

@@ -1,6 +1,10 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
+
+ul>li{
+    list-style:  none;
+}
 #landing{
     background: url('../img/landing_bkg.jpg') center no-repeat;
     -webkit-background-size:cover;
@@ -20,10 +24,12 @@ body{
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size: cover;
-    height: 300px;
+    height: 350px;
     color:white;
-    text-shadow: 2px 2px 4px black;
+    transition: 0.45s all ease-in-out;
+    
 }
+
 
 #design{
     background: url('../img/design_bkg.jpg') center no-repeat;
@@ -31,9 +37,9 @@ body{
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size: cover;
-    height: 300px;
+    height: 350px;
     color:white;
-    text-shadow: 2px 2px 4px black;
+    transition: 0.45s all ease-in-out;
 }
 
 #impression{
@@ -42,9 +48,9 @@ body{
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size: cover;
-    height: 300px;
+    height: 350px;
     color:white;
-    text-shadow: 2px 2px 4px black;
+    transition: 0.45s all ease-in-out;
 }
 
 #packaging{
@@ -53,9 +59,9 @@ body{
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size: cover;
-    height: 300px;
+    height: 350px;
     color:white;
-    text-shadow: 2px 2px 4px black;
+    transition: 0.45s all ease-in-out;
 }
 
 #counseling{
@@ -64,9 +70,9 @@ body{
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size: cover;
-    height: 300px;
+    height: 350px;
     color:white;
-    text-shadow: 2px 2px 4px black;
+    transition: 0.45s all ease-in-out;
 }
 
 #signs{
@@ -75,9 +81,9 @@ body{
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size: cover;
-    height: 300px;
+    height: 350px;
     color:white;
-    text-shadow: 2px 2px 4px black;
+    transition: 0.45s all ease-in-out;
 }
 
 .serviceinfo{

@@ -30,6 +30,10 @@ ul>li{
     
 }
 
+#dx-screenprinting{
+
+    transition: 0.45s all ease-in-out;
+}
 
 #design{
     background: url('../img/design_bkg.jpg') center no-repeat;
@@ -87,5 +91,9 @@ ul>li{
 }
 
 .serviceinfo{
+    text-shadow: 2px 2px 4px black;
+}
+
+.click-fx{
     text-shadow: 2px 2px 4px black;
 }

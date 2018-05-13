@@ -15,6 +15,11 @@
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
+    <!-- leaflet css-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+
     <!-- utility css -->
     <link href="css/utility.css" rel="stylesheet" />
 
@@ -24,9 +29,9 @@
 </head>
 <body>
     
-    
+   
     <div class="container-fluid">
-        <div class="row">
+        <div class="row" id="totop">
             <div class="col-sm-12 extra-padding-25 h-100 d-inline-block">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="navbar-brand" href="#">Publigraph</a>
@@ -90,7 +95,7 @@
                     </div>
 
                     <div class="col-sm-12 text-center extra-padding-25">
-                        <a href="#" class="btn btn-warning">Contact us</a>
+                        <a href="#contact" class="btn btn-red">Contact us</a>
                     </div>
 
                 </div> <!-- /subrow -->
@@ -100,7 +105,7 @@
     </div> <!-- /main container -->
 
     <div class="container-fluid">
-        <div class="row">
+        <div class="row" id="service-row">
             <div class="col-sm-12">
 
                 <div class="row">
@@ -116,7 +121,7 @@
                                 <li>Préparation écran</li>
                             </ul>
                             <br/>
-                            <a href="#" class="btn btn-warning">Plus information</a>
+                            <button type="button" class="btn btn-red" id="btn-screenprinting-enter">Plus information</button>
                         </div><!-- /sub-col info -->
 
                     <div class="col-sm-4 d-sm-none" id="dx-screenprinting">
@@ -138,7 +143,7 @@
                                 <li>Enseignes</li>
                             </ul>
                             <br/>
-                            <a href="#" class="btn btn-warning">Plus information</a>
+                            <button type="button" class="btn btn-red" id="btn-design-enter">Plus information</button>
                         </div><!-- /sub-col info -->
                         <div class="col-sm-4 d-sm-none" id="dx-design">
                             <p class="font-italic text-center my-5"><i class="fas fa-info-circle"></i> clique moi</p>
@@ -155,7 +160,7 @@
                                 <li>Pose publicitaire</li>
                             </ul>
                             <br/>
-                            <a href="#" class="btn btn-warning">Plus information</a>
+                            <button type="button" class="btn btn-red" id="btn-impression-enter">Plus information</button>
                         </div><!-- /sub-col info -->
                         <div class="col-sm-4 d-sm-none" id="dx-impression">
                                 <p class="font-italic text-center my-5"><i class="fas fa-info-circle"></i> clique moi</p>
@@ -192,7 +197,7 @@
                                 <li>Plexi</li>
                             </ul>
                             <br/>
-                            <a href="#" class="btn btn-warning">Plus information</a>
+                            <button type="button" class="btn btn-red" id="btn-packaging-enter">Plus information</button>
                         </div><!-- /sub-col info -->
                         <div class="col-sm-4 d-sm-none" id="dx-packaging">
                                 <p class="font-italic text-center my-5"><i class="fas fa-info-circle"></i> clique moi</p>
@@ -204,7 +209,7 @@
                             <h3>Conseils et gestion projet</h3>
                             <hr class="white"/>
                             <br/>
-                            <a href="#" class="btn btn-warning">Plus information</a>
+                            <button type="button" class="btn btn-red" id="btn-counseling-enter">Plus information</button>
                         </div><!-- /sub-col info -->
                         <div class="col-sm-4 d-sm-none" id="dx-counseling">
                             <p class="font-italic text-center my-5"><i class="fas fa-info-circle"></i> clique moi</p>
@@ -221,7 +226,7 @@
                                 <li>Marquage sur mesures</li>
                             </ul>
                             <br/>
-                            <a href="#" class="btn btn-warning">Plus information</a>
+                            <button type="button" class="btn btn-red" id="btn-signs-enter">Plus information</button>
                         </div><!-- /sub-col info -->
                         <div class="col-sm-4 d-sm-none" id="dx-signs">
                                 <p class="font-italic text-center my-5"><i class="fas fa-info-circle"></i> clique moi</p>
@@ -233,11 +238,272 @@
 
             </div><!-- /services main col -->
         </div><!-- /services row -->
+
+        <div class="row" style="display:none;" id="screenprinting-row-hidden">
+
+            <div class="col-sm-2" id="screenprinting-row-img">
+
+            </div><!-- /end of side-image col -->
+
+            <div class="col-sm-10 extra-padding-25" id="hidden-screenprinting">
+
+                <div class="text-center extra-padding-25">
+                        <button type="button" class="btn btn-red" id="btn-screenprinting-back"><i class="fas fa-arrow-left"></i> Go back</button>
+                </div>
+
+                <h3 class="text-center">Sérigrpahie</h3>
+                <br/>
+                <div class="text-center"><i class="fas fa-info-circle fa-2x"></i></div>
+                
+                <div class="row extra-padding-25">
+
+                    <div class="col-sm-4">
+                        <h5>What is Lorem Ipsum?</h5>
+                        <br/>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
+                        </p>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <h5>Why do we use it?</h5>
+                        <br/>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). 
+                        </p>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <h5>Where does it come from?</h5>
+                        <br/>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.    
+                        </p>
+                    </div>
+                </div><!-- end of sub-row -->
+            </div><!-- end of main info col -->
+        </div><!-- screenprinting-hidden-row end -->
+
+        <div class="row" style="display:none;" id="design-row-hidden">
+
+                <div class="col-sm-2" id="design-row-img">
+    
+                </div><!-- /end of side-image col -->
+    
+                <div class="col-sm-10 extra-padding-25" id="hidden-design">
+                        <div class="text-center extra-padding-25">
+                            <button type="button" class="btn btn-red" id="btn-design-back"><i class="fas fa-arrow-left"></i> Go back</button>
+                        </div>
+                    <h3 class="text-center">Design</h3>
+                    <br/>
+                    <div class="text-center"><i class="fas fa-info-circle fa-2x"></i></div>
+                    
+                    <div class="row extra-padding-25">
+    
+                        <div class="col-sm-4">
+                            <h5>What is Lorem Ipsum?</h5>
+                            <br/>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
+                            </p>
+                        </div>
+    
+                        <div class="col-sm-4">
+                            <h5>Why do we use it?</h5>
+                            <br/>
+                            <p>
+                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). 
+                            </p>
+                        </div>
+    
+                        <div class="col-sm-4">
+                            <h5>Where does it come from?</h5>
+                            <br/>
+                            <p>
+                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.    
+                            </p>
+                        </div>
+                    </div><!-- end of sub-row -->
+                </div><!-- end of main info col -->
+        </div><!-- design-hidden-row end -->
+
+        <div class="row" style="display:none;" id="impression-row-hidden">
+
+                <div class="col-sm-2" id="impression-row-img">
+    
+                </div><!-- /end of side-image col -->
+    
+                <div class="col-sm-10 extra-padding-25" id="hidden-impression">
+                        <div class="text-center extra-padding-25">
+                            <button type="button" class="btn btn-red" id="btn-impression-back"><i class="fas fa-arrow-left"></i> Go back</button>
+                        </div>
+                    <h3 class="text-center">Impression</h3>
+                    <br/>
+                    <div class="text-center"><i class="fas fa-info-circle fa-2x"></i></div>
+                    
+                    <div class="row extra-padding-25">
+    
+                        <div class="col-sm-4">
+                            <h5>What is Lorem Ipsum?</h5>
+                            <br/>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
+                            </p>
+                        </div>
+    
+                        <div class="col-sm-4">
+                            <h5>Why do we use it?</h5>
+                            <br/>
+                            <p>
+                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). 
+                            </p>
+                        </div>
+    
+                        <div class="col-sm-4">
+                            <h5>Where does it come from?</h5>
+                            <br/>
+                            <p>
+                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.    
+                            </p>
+                        </div>
+                    </div><!-- end of sub-row -->
+                </div><!-- end of main info col -->
+        </div><!-- impression-hidden-row end -->
+
+        <div class="row" style="display:none;" id="packaging-row-hidden">
+
+                <div class="col-sm-2" id="packaging-row-img">
+    
+                </div><!-- /end of side-image col -->
+    
+                <div class="col-sm-10 extra-padding-25" id="hidden-packaging">
+                        <div class="text-center extra-padding-25">
+                            <button type="button" class="btn btn-red" id="btn-packaging-back"><i class="fas fa-arrow-left"></i> Go back</button>
+                        </div>
+                    <h3 class="text-center">Emballage</h3>
+                    <br/>
+                    <div class="text-center"><i class="fas fa-info-circle fa-2x"></i></div>
+                    
+                    <div class="row extra-padding-25">
+    
+                        <div class="col-sm-4">
+                            <h5>What is Lorem Ipsum?</h5>
+                            <br/>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
+                            </p>
+                        </div>
+    
+                        <div class="col-sm-4">
+                            <h5>Why do we use it?</h5>
+                            <br/>
+                            <p>
+                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). 
+                            </p>
+                        </div>
+    
+                        <div class="col-sm-4">
+                            <h5>Where does it come from?</h5>
+                            <br/>
+                            <p>
+                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.    
+                            </p>
+                        </div>
+                    </div><!-- end of sub-row -->
+                </div><!-- end of main info col -->
+        </div><!-- packaging-hidden-row end -->
+
+        <div class="row" style="display:none;" id="counseling-row-hidden">
+
+                <div class="col-sm-2" id="counseling-row-img">
+    
+                </div><!-- /end of side-image col -->
+    
+                <div class="col-sm-10 extra-padding-25" id="hidden-counseling">
+                        <div class="text-center extra-padding-25">
+                            <button type="button" class="btn btn-red" id="btn-counseling-back"><i class="fas fa-arrow-left"></i> Go back</button>
+                        </div>
+                    <h3 class="text-center">Conseils et gestion projet</h3>
+                    <br/>
+                    <div class="text-center"><i class="fas fa-info-circle fa-2x"></i></div>
+                    
+                    <div class="row extra-padding-25">
+    
+                        <div class="col-sm-4">
+                            <h5>What is Lorem Ipsum?</h5>
+                            <br/>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
+                            </p>
+                        </div>
+    
+                        <div class="col-sm-4">
+                            <h5>Why do we use it?</h5>
+                            <br/>
+                            <p>
+                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). 
+                            </p>
+                        </div>
+    
+                        <div class="col-sm-4">
+                            <h5>Where does it come from?</h5>
+                            <br/>
+                            <p>
+                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.    
+                            </p>
+                        </div>
+                    </div><!-- end of sub-row -->
+                </div><!-- end of main info col -->
+        </div><!-- counseling-hidden-row end -->
+
+        <div class="row" style="display:none;" id="signs-row-hidden">
+
+                <div class="col-sm-2" id="signs-row-img">
+    
+                </div><!-- /end of side-image col -->
+    
+                <div class="col-sm-10 extra-padding-25" id="hidden-signs">
+                        <div class="text-center extra-padding-25">
+                            <button type="button" class="btn btn-red" id="btn-signs-back"><i class="fas fa-arrow-left"></i> Go back</button>
+                        </div>
+                    <h3 class="text-center">Signalétique</h3>
+                    <br/>
+                    <div class="text-center"><i class="fas fa-info-circle fa-2x"></i></div>
+                    
+                    <div class="row extra-padding-25">
+    
+                        <div class="col-sm-4">
+                            <h5>What is Lorem Ipsum?</h5>
+                            <br/>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
+                            </p>
+                        </div>
+    
+                        <div class="col-sm-4">
+                            <h5>Why do we use it?</h5>
+                            <br/>
+                            <p>
+                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). 
+                            </p>
+                        </div>
+    
+                        <div class="col-sm-4">
+                            <h5>Where does it come from?</h5>
+                            <br/>
+                            <p>
+                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.    
+                            </p>
+                        </div>
+                    </div><!-- end of sub-row -->
+                </div><!-- end of main info col -->
+        </div><!-- signs-hidden-row end -->
+
     </div><!-- /services container -->
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-12 extra-padding-25">
+            <div class="col-sm-12 extra-padding-25" id="contact">
                 <h3 class="text-center extra-padding-25"><i class="fas fa-globe fa-2x"></i></h3>
 
 
@@ -254,7 +520,7 @@
                             <br/>
                             <textarea class="form-control" rows="5" placeholder="enter your message"></textarea>
                             <br/>
-                            <button type="submit" class="btn btn-warning">Send message</button>
+                            <button type="submit" class="btn btn-red">Send message</button>
                         </form>
                     </div><!-- /sub-col contact form -->
                 </div><!-- /sub row contact form-->
@@ -263,12 +529,52 @@
         </div><!-- /contact us row -->
     </div><!-- /contact us container -->
 
+    <div class="container-fluid">
+        <div class="row" id="mapid">
+        </div>
+    </div><!-- map container end-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 extra-padding-25" id="footer">
+                <div class="row">
+
+                    <div class="col-sm-6 text-center mx-auto">
+                        <h3>Publigraph SA</h3>
+                        <br/>
+                        <a href="#"><i class="fab fa-facebook-square fa-2x extra-padding-10"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square fa-2x extra-padding-10"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-square fa-2x extra-padding-10"></i></a>
+                        <br/>
+                        <br/>
+                        <p>info@publigraphsa.com</p>
+                        <p>+0 123 456 789</p>
+                        <p>Switzerland</p>
+                        <p>&copy;2018</p>
+                    </div>
+
+                </div><!-- sub row -->
+            </div><!-- main col footer end-->
+        </div><!-- main row footer end -->
+    </div><!-- footer container end -->
+
+    <!-- scroll to top -->
+    <button id="btn-top" title="Go to top"><i class="fas fa-angle-up"></i></button>
+
     <!-- scripts -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
+    <!-- leaflet map js-->
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+    integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+    crossorigin=""></script>
+
+    <script src="js/mapControl.js"></script>
+
     <!-- custom scripts -->
     <script src="js/services.js"></script>
+    <script src="js/scrollToTop.js"></script>
 </body>
 </html>

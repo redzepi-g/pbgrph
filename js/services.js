@@ -8,6 +8,8 @@ $(document).ready(function(){
    let divCounseling = document.getElementById("counseling");
    let divSigns = document.getElementById("signs");
    
+
+   
     //get print divs
     let divScreenprintingText = document.getElementById("d-screenprinting");
     let divDesignText = document.getElementById("d-design");
@@ -23,14 +25,6 @@ $(document).ready(function(){
     let divPackagingClick = document.getElementById("dx-packaging");
     let divCounselingClick = document.getElementById("dx-counseling");
     let divSignsClick = document.getElementById("dx-signs");
-
-    //dx-btns
-    let btnDxScreenprinting = document.getElementById("btn-dx-screenprinting");
-    let btnDxDesign = document.getElementById("btn-dx-design");
-    let btnDxImpression = document.getElementById("btn-dx-impression");
-    let btnDxPackaging = document.getElementById("btn-dx-packaging");
-    let btnDxCounseling = document.getElementById("btn-dx-counseling");
-    let btnDxSigns = document.getElementById("btn-dx-signs");
 
     //get the service rows
     let serviceRow = document.getElementById("service-row");
@@ -59,32 +53,51 @@ $(document).ready(function(){
     let btnCounselingBack = document.getElementById("btn-counseling-back");
     let btnSignsBack = document.getElementById("btn-signs-back");
 
-    //dx-fix
-    btnDxScreenprinting.addEventListener("mouseenter",function(){$(divScreenprinting).css({"background":"url('img/o_print_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divScreenprintingText.setAttribute("class","mx-auto my-5 text-center");divScreenprintingClick.setAttribute("class","col-sm-4 d-none");});
-    btnDxDesign.addEventListener("mouseenter",function(){$(divDesign).css({"background":"url('img/o_design_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divDesignText.setAttribute("class","mx-auto my-5 text-center");divDesignClick.setAttribute("class","col-sm-4 d-none");});
-    btnDxImpression.addEventListener("mouseenter",function(){$(divImpression).css({"background":"url('img/o_impression_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divImpressionText.setAttribute("class","mx-auto my-5 text-center");divImpressionClick.setAttribute("class","col-sm-4 d-none");});
-    btnDxPackaging.addEventListener("mouseenter",function(){$(divPackaging).css({"background":"url('img/o_package_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divPackagingText.setAttribute("class","mx-auto my-5 text-center");divPackagingClick.setAttribute("class","col-sm-4 d-none");});
-    btnDxCounseling.addEventListener("mouseenter",function(){$(divCounseling).css({"background":"url('img/o_meeting_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divCounselingText.setAttribute("class","mx-auto my-5 text-center");divCounselingClick.setAttribute("class","col-sm-4 d-none");});
-    btnDxSigns.addEventListener("mouseenter",function(){$(divSigns).css({"background":"url('img/o_signs_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divSignsText.setAttribute("class","mx-auto my-5 text-center");divSignsClick.setAttribute("class","col-sm-4 d-none");});
 
     //Screenprinting
     divScreenprinting.addEventListener("mouseenter",function(){$(divScreenprinting).css({"background":"url('img/o_print_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divScreenprintingText.setAttribute("class","mx-auto my-5 text-center");divScreenprintingClick.setAttribute("class","col-sm-4 d-none");});
-    divScreenprinting.addEventListener("mouseleave",function(){$(divScreenprinting).css({"background":"url('img/print_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divScreenprintingText.setAttribute("class","mx-auto d-none my-5 text-center");divScreenprintingClick.setAttribute("class","col-sm-4 d-sm-none text-center mt-150");});
+    
+$(divScreenprinting).click(function() {
+
+});
+
+$(divDesign).click(function() {
+
+});
+
+$(divImpression).click(function() {
+
+});
+
+$(divPackaging).click(function() {
+
+});
+
+$(divCounseling).click(function() {
+
+});
+
+$(divSigns).click(function() {
+
+});
+
+    
+    divScreenprinting.addEventListener("mouseleave",function(){$(divScreenprinting).css({"background":"url('img/print_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divScreenprintingText.setAttribute("class","mx-auto d-none my-5 text-center");divScreenprintingClick.setAttribute("class","col-sm-4 d-sm-none");});
     //Design
     divDesign.addEventListener("mouseenter",function(){$(divDesign).css({"background":"url('img/o_design_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divDesignText.setAttribute("class","mx-auto my-5 text-center");divDesignClick.setAttribute("class","col-sm-4 d-none");});
-    divDesign.addEventListener("mouseleave",function(){$(divDesign).css({"background":"url('img/design_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divDesignText.setAttribute("class","mx-auto d-none my-5 text-center");divDesignClick.setAttribute("class","col-sm-4 d-sm-none text-center mt-150");});
+    divDesign.addEventListener("mouseleave",function(){$(divDesign).css({"background":"url('img/design_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divDesignText.setAttribute("class","mx-auto d-none my-5 text-center");divDesignClick.setAttribute("class","col-sm-4 d-sm-none");});
     //Impression
     divImpression.addEventListener("mouseenter",function(){$(divImpression).css({"background":"url('img/o_impression_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divImpressionText.setAttribute("class","mx-auto my-5 text-center");divImpressionClick.setAttribute("class","col-sm-4 d-none");});
-    divImpression.addEventListener("mouseleave",function(){$(divImpression).css({"background":"url('img/impression_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divImpressionText.setAttribute("class","mx-auto d-none my-5 text-center");divImpressionClick.setAttribute("class","col-sm-4 d-sm-none text-center mt-150");});
+    divImpression.addEventListener("mouseleave",function(){$(divImpression).css({"background":"url('img/impression_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divImpressionText.setAttribute("class","mx-auto d-none my-5 text-center");divImpressionClick.setAttribute("class","col-sm-4 d-sm-none");});
     //Packaging
     divPackaging.addEventListener("mouseenter",function(){$(divPackaging).css({"background":"url('img/o_package_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divPackagingText.setAttribute("class","mx-auto my-5 text-center");divPackagingClick.setAttribute("class","col-sm-4 d-none");});
-    divPackaging.addEventListener("mouseleave",function(){$(divPackaging).css({"background":"url('img/package_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divPackagingText.setAttribute("class","mx-auto d-none my-5 text-center");divPackagingClick.setAttribute("class","col-sm-4 d-sm-none text-center mt-150");});
+    divPackaging.addEventListener("mouseleave",function(){$(divPackaging).css({"background":"url('img/package_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divPackagingText.setAttribute("class","mx-auto d-none my-5 text-center");divPackagingClick.setAttribute("class","col-sm-4 d-sm-none");});
     //Counseling
     divCounseling.addEventListener("mouseenter",function(){$(divCounseling).css({"background":"url('img/o_meeting_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divCounselingText.setAttribute("class","mx-auto my-5 text-center");divCounselingClick.setAttribute("class","col-sm-4 d-none");});
-    divCounseling.addEventListener("mouseleave",function(){$(divCounseling).css({"background":"url('img/meeting_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divCounselingText.setAttribute("class","mx-auto d-none my-5 text-center");divCounselingClick.setAttribute("class","col-sm-4 d-sm-none text-center mt-150");});
+    divCounseling.addEventListener("mouseleave",function(){$(divCounseling).css({"background":"url('img/meeting_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divCounselingText.setAttribute("class","mx-auto d-none my-5 text-center");divCounselingClick.setAttribute("class","col-sm-4 d-sm-none");});
     //Signs
     divSigns.addEventListener("mouseenter",function(){$(divSigns).css({"background":"url('img/o_signs_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divSignsText.setAttribute("class","mx-auto my-5 text-center");divSignsClick.setAttribute("class","col-sm-4 d-none");});
-    divSigns.addEventListener("mouseleave",function(){$(divSigns).css({"background":"url('img/signs_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divSignsText.setAttribute("class","mx-auto d-none my-5 text-center");divSignsClick.setAttribute("class","col-sm-4 d-sm-none text-center mt-150");});
+    divSigns.addEventListener("mouseleave",function(){$(divSigns).css({"background":"url('img/signs_bkg.jpg') center no-repeat","-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover","height":"350px"});divSignsText.setAttribute("class","mx-auto d-none my-5 text-center");divSignsClick.setAttribute("class","col-sm-4 d-sm-none");});
 
 
     //service navigation

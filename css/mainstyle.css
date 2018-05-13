@@ -15,7 +15,13 @@ ul>li{
 }
 
 .active{
-    border-bottom: 2px solid black;
+    
+    border-bottom: 2px solid #D12031;
+    font-weight: bold;
+}
+
+.navbar-nav>.nav-item.active{
+    color: red;
 }
 
 #screenprinting{

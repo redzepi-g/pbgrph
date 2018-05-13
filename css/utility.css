@@ -7,11 +7,11 @@
     background-color:rgba(255,255,255,0.5);
 }
 
-/* margin */
-.mt-150{
-    margin-top:150px;
+/* vh */
+.vh-full{
+    
+    height: 100vh;
 }
-
 
 /* padding */
 .extra-padding-5{

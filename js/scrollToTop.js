@@ -14,7 +14,9 @@ function scrollFunction() {
  let btnTop = document.getElementById("btn-top");
 
  btnTop.addEventListener("click", function(){
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.querySelector('#totop').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
  });
+
 });

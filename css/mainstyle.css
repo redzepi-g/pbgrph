@@ -14,15 +14,13 @@ ul>li{
     height: 400px;
 }
 
-.active{
-    
-    border-bottom: 2px solid #D12031;
+
+#totop .navbar-nav li.active > a{
+    color: #D12031;
+    border-bottom: 1px solid #D12031;
     font-weight: bold;
 }
 
-.navbar-nav>.nav-item.active{
-    color: red;
-}
 
 #screenprinting{
     background: url('../img/print_bkg.jpg') center no-repeat;
